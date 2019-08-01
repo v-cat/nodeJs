@@ -1,0 +1,23 @@
+{
+  "name": "nodeJs",
+  "version": "1.0.0",
+  "description": "node.js 8 the Right Way",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v-cat/nodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v-cat/nodeJs/issues"
+  },
+  "homepage": "https://github.com/v-cat/nodeJs#readme",
+  "devDependencies": {
+    "mocha": "3.4.2"
+  }
+}
