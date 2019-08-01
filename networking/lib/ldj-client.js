@@ -1,4 +1,3 @@
-import { Stream } from "stream";
 
 const EventEmitter = require('events').EventEmitter;
 //LDJClient是一个类，
