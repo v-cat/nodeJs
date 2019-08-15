@@ -27,5 +27,6 @@ describe("LDJClient", () => {
         });
         // 最后出发stream的data事件，引发message事件回调执行
         stream.emit("data", '{"foo":"bar"}\n');
+        // process.nextTick(()=>stream.emit('data','"bar"}\n'));
     });
 });
