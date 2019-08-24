@@ -1,0 +1,34 @@
+<rdf:RDF>
+  <pgterms:ebook rdf:about="ebooks/132">
+    <dcterms:title>
+      The Art of War
+    </dcterms:title>
+    <dctermss:agent rdf:about="2009/agents/4349">
+
+      <dcterms:name>
+        Sunzi,active 6th century B.C
+      </dcterms:name>
+    </dctermss:agent>
+    <dctermss:agent rdf:about="2009/agents/5150">
+      <dcterms:name>
+        Gile,Lionel
+      </dcterms:name>
+      </dcterms:agent>
+      <dcterms:subject>
+        <rdf:Description rdf:nodeId="N26bb21da0c924e5abcd5809a47f231e7">
+          <dcam:menberOf rdf:resource="http://purl.org/dc/terms/LCSH" />
+          <rdf:value>
+            Military Art and science--early works to 1880</rdf:value>
+          </rdf:value>
+        </rdf:Description>
+      </dcterms:subject>
+      <dcterms:subject>
+        <rdf:Description rdf:nodeId="N269948d6ecf64b6caf1c15139afd375b">
+          <dcam:menberOf rdf:resource="http://purl.org/dc/terms/LCSH" />
+          <rdf:value>
+            War -- early works to 1880</rdf:value>
+          </rdf:value>
+        </rdf:Description>
+      </dcterms:subject>
+  </pgterms:ebook>
+  </rdf>
