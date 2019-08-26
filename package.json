@@ -23,5 +23,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {}
+  "dependencies": {
+    "experss": "0.0.1-security",
+    "express": "^4.14.1",
+    "morgan": "^1.9.1"
+  }
 }

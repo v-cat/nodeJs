@@ -68,10 +68,38 @@ program
     .alias("li") //alias()方法添加别名
     .description("get a list if indices in this cluster")
     .action(() => {
-        const path = program.json ? "_all" : "_cat/indices?v"; 
+        const path = program.json ? "_all" : "_cat/indices?v";
         //如果用户用--json标志制定了JSON模式，则路径为__all，否则为_cat/indices?v
         request({ url: fullUrl(path), json: program.json }, handleResponse);
     });
+program
+    .command('bulk <file>')
+    .description('read and perform bulk options from the specified file')
+    .action(
+        file => {
+            fs.stat(file, (err, stats) => { //异步检查提供的文件
+                if (err) {
+                    if (program.json) {
+                        console.log(JSON.stringify(err));
+                        return;
+                    }
+                    throw err;
+                }
+                const options = {
+                    url: fullUrl('_bulk'),
+                    json: true,
+                    headers: {
+                        'content-length': stats.size,
+                        'content-type': 'application/json',
+                    }
+                };
+                const req = request.post(options);//发送post请求
+                const stream = fs.createReadStream(file);
+                stream.pipe(req);
+                req.pipe(process.stdout)
+            })
+        }
+    )
 program.parse(process.argv);
 if (!program.args.filter(arg => typeof arg === "object").length) {
     program.help;
