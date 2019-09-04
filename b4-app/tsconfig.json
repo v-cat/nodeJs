@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "module": "CommonJS",
+        "target": "es6",
+        "lib": [
+            "dom",
+            "es2015.promise",
+            "es6"
+        ],
+        "allowJs": true,
+        "alwaysStrict": true,
+    }
+}
